@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import AgregarContacto from './Components/AgregarContacto';
+import MostrarContactos from './Components/MostrarContacto';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Estado global de la aplicación
+  const [contactos, setContactos] = useState([]);
+
+  // Función que el hijo 'AgregarContacto' llamará para guardar
+  const agregarContactoALista = (nuevo) => {
+    setContactos([...contactos, nuevo]);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div style={{ backgroundColor: '#f0f2f5', minHeight: '100vh', padding: '20px' }}>
+      <h1 style={{ textAlign: 'center' }}>Gestor de Contactos</h1>
+      <AgregarContacto onAgregar={agregarContactoALista} />
+      <hr style={{ margin: '30px auto', maxWidth: '500px' }} />
+      <MostrarContactos lista={contactos} />
+    </div>
+  );
 }
 
-export default App
+export default App;

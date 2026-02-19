@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Edwin",
+    "apellido": "Leiva",
+    "telefono": "7663-4979",
+    "favorito": false
+  },
+  {
+    "id": 2,
+    "nombre": "Anderson",
+    "apellido": "Morán",
+    "telefono": "7907-4825",
+    "favorito": true
+  },
+  {
+    "id": 3,
+    "nombre": "Kevin",
+    "apellido": "Aguilar",
+    "telefono": "7492-2370",
+    "favorito": false
+  }
+]

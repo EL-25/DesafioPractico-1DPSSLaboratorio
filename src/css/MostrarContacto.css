@@ -1,0 +1,86 @@
+/* Define el ancho máximo y el centrado horizontal del contenedor de la lista */
+.lista-contenedor {
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Establece el formato visual, color y espaciado del título de la sección */
+.lista-titulo {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* Aplica un estilo visual tenue e itálico para indicar la ausencia de datos */
+.lista-vacia {
+  text-align: center;
+  color: #95a5a6;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Configura una cuadrícula de una sola columna con una separación constante entre elementos */
+.grid-contactos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+/* Crea una tarjeta con diseño flexible, bordes redondeados y una sombra sutil */
+.tarjeta-contacto {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f2f6;
+  transition: transform 0.2s ease;
+}
+
+/* Desplaza ligeramente la tarjeta y cambia el color del borde al pasar el cursor */
+.tarjeta-contacto:hover {
+  transform: translateX(5px);
+  border-color: #3498db;
+}
+
+/* Diseña un círculo con degradado para contener las iniciales del contacto */
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+/* Organiza la información del contacto en una columna vertical */
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Aplica un estilo de fuente grueso y color oscuro para resaltar el nombre */
+.nombre-completo {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Define el color grisáceo y el espaciado de letras para el número telefónico */
+.tel-numero {
+  margin: 4px 0 0 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}

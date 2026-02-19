@@ -11,7 +11,7 @@
     "nombre": "Anderson",
     "apellido": "Morán",
     "telefono": "7907-4825",
-    "favorito": true
+    "favorito": false
   },
   {
     "id": 3,

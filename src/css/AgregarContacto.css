@@ -1,0 +1,88 @@
+/* Establece el ancho máximo, centrado y diseño base del contenedor principal */
+.formulario-contenedor {
+  max-width: 380px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Define la tipografía, color y alineación del encabezado del formulario */
+.formulario-titulo {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.6rem;
+}
+
+/* Aplica una separación vertical entre cada grupo de etiqueta e input */
+.campo-grupo {
+  margin-bottom: 20px;
+}
+
+/* Configura el estilo, peso visual y posicionamiento de las etiquetas de texto */
+.campo-grupo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+/* Define el aspecto visual de los campos de texto, incluyendo bordes y relleno interno */
+.campo-grupo input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eaeeef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Modifica el color del borde y añade una sombra suave cuando el usuario hace clic en el input */
+.campo-grupo input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Determina las dimensiones, color de fondo y estilo del botón de envío */
+.boton-guardar {
+  width: 100%;
+  padding: 14px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Oscurece el tono de verde del botón cuando el cursor se posiciona encima */
+.boton-guardar:hover {
+  background-color: #219150;
+}
+
+/* Estiliza el cuadro de confirmación con colores suaves y una animación de entrada */
+.mensaje-exito {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #dff9fb;
+  color: #0984e3;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #74b9ff;
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Define la secuencia de movimiento y transparencia para la animación de aparición */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

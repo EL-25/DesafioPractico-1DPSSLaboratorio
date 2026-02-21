@@ -1,7 +1,7 @@
 import React from 'react';
 import Swal from 'sweetalert2';
 
-function Contact({ item, onToggle }) {
+function Contact({ item, onToggle, onBorrar }) {
   
   //Alerta para agregar/quitar favoritos
   const manejarFavorito = () => {
@@ -20,6 +20,24 @@ function Contact({ item, onToggle }) {
     }).then((result) => {
       if (result.isConfirmed) {
         onToggle(item.id);
+      }
+    });
+  };
+
+  // Alerta para eliminar contacto
+  const manejarEliminar = () => {
+    Swal.fire({
+      title: '¿Eliminar contacto?',
+      text: 'Esta acción no se puede deshacer.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#aaa',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        onBorrar(item.id);
       }
     });
   };
@@ -65,6 +83,19 @@ function Contact({ item, onToggle }) {
           }}
         >
           {item.favorito ? 'Quitar Favorito' : '⭐ Hacer Favorito'}
+        </button>
+        <button
+          onClick={manejarEliminar}
+          style={{
+            cursor: 'pointer',
+            padding: '8px 15px',
+            borderRadius: '5px',
+            border: 'none',
+            backgroundColor: '#e53935',
+            color: 'white'
+          }}
+        >
+          🗑 Eliminar
         </button>
       </div>
     </div>

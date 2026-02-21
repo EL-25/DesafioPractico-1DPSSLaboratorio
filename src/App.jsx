@@ -20,6 +20,13 @@ function App() {
       c.id === id ? { ...c, favorito: !c.favorito } : c
     ));
   };
+  //Eliminar contacto 
+  const eliminarContacto = (id) => {
+    const confirmar = window.confirm("¿Seguro que deseas eliminar?");
+    if (confirmar) {
+      setContactos(prevContactos => prevContactos.filter(c => c.id !== id));
+    }
+  };
 
   //Los favoritos aparecen siempre al inicio (Punto 5 rúbrica)
   const contactosOrdenados = [...contactos].sort((a, b) => b.favorito - a.favorito);
@@ -37,6 +44,7 @@ function App() {
       <ContactList 
         lista={contactosOrdenados} 
         onToggleFavorito={toggleFavorito} 
+        onEliminar={eliminarContacto}
       />
     </div>
   );
